@@ -1,5 +1,5 @@
 # LatinAmericanIsolates
-Data Files used in analyses for Understanding the Hidden Complexity of Latin American Population Isolates\
+Data Files used in analyses for Understanding the Hidden Complexity of Latin American Population Isolates
 
 There is a single file with all the counts used:\
   Results_SeatSeq_results_JzWholeGenome_v4_Aug17_AllSeqIndivs_Final\
