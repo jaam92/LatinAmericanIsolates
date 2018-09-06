@@ -1,19 +1,18 @@
 #Set directory and call libraries
-setwd("~/Documents/R_code/IBDSegments")
 library(ggplot2)
 library(data.table)
 library(scales)
 
 #Import Files
-IbdSeqCOdf= read.delim(file = "~/Documents/R_code/IBDSegments/CO_allchroms_IBDSeq_FormattedRscript.out")
-IbdSeqCRdf= read.delim(file = "~/Documents/R_code/IBDSegments/CR_allchroms_IBDSeq_FormattedRscript.out")
-IbdSeqCLMdf= read.delim(file = "~/Documents/R_code/IBDSegments/CLM_allchroms_IBDSeq_FormattedRscript.out")
-IbdSeqCEUdf= read.delim(file = "~/Documents/R_code/IBDSegments/CEU_allchroms_IBDSeq_FormattedRscript.out")
-IbdSeqYRIdf= read.delim(file = "~/Documents/R_code/IBDSegments/YRI_allchroms_IBDSeq_FormattedRscript.out")
-IbdSeqPURdf= read.delim(file = "~/Documents/R_code/IBDSegments/PUR_allchroms_IBDSeq_FormattedRscript.out")
-IbdSeqPELdf= read.delim(file = "~/Documents/R_code/IBDSegments/PEL_allchroms_IBDSeq_FormattedRscript.out")
-IbdSeqMEXdf= read.delim(file = "~/Documents/R_code/IBDSegments/MEX_allchroms_IBDSeq_FormattedRscript.out")
-IbdSeqFINdf= read.delim(file = "~/Documents/R_code/IBDSegments/FIN_allchroms_IBDSeq_FormattedRscript.out")
+IbdSeqCOdf= read.delim(file = "CO_allchroms_IBDSeq_FormattedRscript.out")
+IbdSeqCRdf= read.delim(file = "CR_allchroms_IBDSeq_FormattedRscript.out")
+IbdSeqCLMdf= read.delim(file = "CLM_allchroms_IBDSeq_FormattedRscript.out")
+IbdSeqCEUdf= read.delim(file = "CEU_allchroms_IBDSeq_FormattedRscript.out")
+IbdSeqYRIdf= read.delim(file = "YRI_allchroms_IBDSeq_FormattedRscript.out")
+IbdSeqPURdf= read.delim(file = "PUR_allchroms_IBDSeq_FormattedRscript.out")
+IbdSeqPELdf= read.delim(file = "PEL_allchroms_IBDSeq_FormattedRscript.out")
+IbdSeqMEXdf= read.delim(file = "MEX_allchroms_IBDSeq_FormattedRscript.out")
+IbdSeqFINdf= read.delim(file = "FIN_allchroms_IBDSeq_FormattedRscript.out")
 
 AllPopulationsDF=rbind.data.frame(IbdSeqCOdf,IbdSeqCRdf,IbdSeqCEUdf,IbdSeqCLMdf,IbdSeqYRIdf, IbdSeqFINdf, IbdSeqMEXdf, IbdSeqPELdf, IbdSeqPURdf)
 names(AllPopulationsDF)[8] = "Population"
@@ -70,7 +69,7 @@ BeforeFilt = ggplot(AllPopulationsDF, aes(x=Len/10^6, y=SNP_Count)) + geom_point
 
 AfterFilt = P2 + ggtitle(NULL)
 
-pdf("FilteringIBDSegments_Aug17.pdf", width=15.25, height=8.0)
+pdf("FilteringIBDSegments.pdf", width=15.25, height=8.0)
 
 grid.arrange(BeforeFilt + theme(legend.position = "none") + labs(x=NULL, y=NULL) + scale_y_continuous(labels = scales::scientific), AfterFilt + labs(x=NULL, y=NULL), left=textGrob("Count of SNPs", gp=gpar(fontface="bold",fontsize=20), rot=90) , bottom=textGrob("Length of IBD segment (Mb)", gp=gpar(fontface="bold",fontsize=20), vjust=0.01), nrow =1)
 
