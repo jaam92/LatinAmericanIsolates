@@ -36,7 +36,7 @@ TrueIBDSeqIBDSegs = subset(z, z$ToKeep == "TRUE")
 IBDSeq_Scores = aggregate(as.numeric(TrueIBDSeqIBDSegs$cM), by = list(Population = TrueIBDSeqIBDSegs$Population), FUN = sum)#Calculate length per Population
 IBDSeq_Scores$CountsPerPopulation = table(TrueIBDSeqIBDSegs$Population)
 sampSize = 30
-normalizationConstant = (choose(2*sampSize, sampSize)) - sampSize #From Nakatsuka et al. 2017 Nature Genetics
+normalizationConstant = (choose(2*sampSize, 2)) - sampSize #From Nakatsuka et al. 2017 Nature Genetics
 IBDSeq_Scores$NormalizedScore = IBDSeq_Scores$x/normalizationConstant
 
 #Make Scores Relative to Finnish
