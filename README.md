@@ -4,7 +4,7 @@ Data files and code accompanying:
 
 > Mooney, J. A., Huber, C. D., Service, S., Sul, J. H., Marsden, C. D., Zhang, Z., Sabatti, C., Ruiz-Linares, A., Bedoya, G., Costa Rica/Colombia Consortium for Genetic Investigation of Bipolar Endophenotypes, Freimer, N. B., & Lohmueller, K. E. (2018). Understanding the hidden complexity of Latin American population isolates. *American Journal of Human Genetics*, 103(5), 707–726. [Full text on PubMed Central](https://pmc.ncbi.nlm.nih.gov/articles/PMC6218714/)
 
-This repository contains the summary files used to compare runs of homozygosity (ROH), identity-by-descent (IBD) sharing, and the burden of deleterious variation in whole-genome sequences from two Latin American population isolates, Antioquia, Colombia (`CO`) and the Central Valley of Costa Rica (`CR`), with populations from the 1000 Genomes Project.
+This repository contains the summary files used to compare runs of homozygosity (ROH), identity-by-descent (IBD) sharing, and the burden of deleterious variation in whole-genome sequences from two Latin American population isolates, Antioquia, Colombia (`CO`) and the Central Valley of Costa Rica (`CR`), with populations from the 1000 Genomes Project (build hg19).
 
 ## Populations
 
